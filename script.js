@@ -1,12 +1,35 @@
 
 const bibleQuotes = [
-    "主是我的牧者，我必不至缺乏。— 诗篇 23:1",
-    "神是我们的避难所，是我们的力量。— 诗篇 46:1",
-    "凡等候耶和华的，必重新得力。— 以赛亚书 40:31",
-    "不要怕，只要信。— 马可福音 5:36",
-    "你们要刚强壮胆，不要害怕。— 申命记 31:6",
-    "耶和华靠近伤心的人，拯救灵性痛悔的人。— 诗篇 34:18",
-    "耶和华是我的力量，是我的盾牌。— 诗篇 28:7"
+    "Do not be wise in your own eyes; fear the Lord and shun evil. This will bring health to your body and nourishment to your bones." – Proverbs 3:7-8
+    "For I know the plans I have for you,” declares the Lord, “plans to prosper you and not to harm you, plans to give you a hope and a future." – Jeremiah 29:11
+    "The Lord is my shepherd; I lack nothing." – Psalm 23:1
+    "I can do all things through Christ who strengthens me." – Philippians 4:13
+    "The Lord is close to the brokenhearted and saves those who are crushed in spirit." – Psalm 34:18
+    "In the beginning was the Word, and the Word was with God, and the Word was God." – John 1:1
+    "And we know that in all things God works for the good of those who love him, who have been called according to his purpose." – Romans 8:28
+    "For God so loved the world that he gave his one and only Son, that whoever believes in him shall not perish but have eternal life." – John 3:16
+    "Trust in the Lord with all your heart and lean not on your own understanding; in all your ways submit to him, and he will make your paths straight." – Proverbs 3:5-6
+    "But the fruit of the Spirit is love, joy, peace, forbearance, kindness, goodness, faithfulness, gentleness and self-control." – Galatians 5:22-23
+    "I have told you these things, so that in me you may have peace. In this world you will have trouble. But take heart! I have overcome the world." – John 16:33
+    "Cast all your anxiety on him because he cares for you." – 1 Peter 5:7
+    "For the Spirit God gave us does not make us timid, but gives us power, love and self-discipline." – 2 Timothy 1:7
+    "The Lord will fight for you; you need only to be still." – Exodus 14:14
+    "The Lord is my light and my salvation— whom shall I fear? The Lord is the stronghold of my life— of whom shall I be afraid?" – Psalm 27:1
+    "My grace is sufficient for you, for my power is made perfect in weakness." – 2 Corinthians 12:9
+    "But the Lord stood by me and gave me strength." – 2 Timothy 4:17
+    "The name of the Lord is a fortified tower; the righteous run to it and are safe." – Proverbs 18:10
+    "The Lord is my rock, my fortress and my deliverer; my God is my rock, in whom I take refuge." – 2 Samuel 22:2-3
+    "The Lord is compassionate and gracious, slow to anger, abounding in love." – Psalm 103:8
+    "The Lord is near to all who call on him, to all who call on him in truth." – Psalm 145:18
+    "Fear not, for I have redeemed you; I have called you by name, you are mine." – Isaiah 43:1
+    "I will instruct you and teach you in the way you should go; I will counsel you with my loving eye on you." – Psalm 32:8
+    "With God all things are possible." – Matthew 19:26
+    "The Lord is good to all; he has compassion on all he has made." – Psalm 145:9
+    "Come to me, all you who are weary and burdened, and I will give you rest." – Matthew 11:28
+    "The joy of the Lord is your strength." – Nehemiah 8:10
+    "I have told you this so that my joy may be in you and that your joy may be complete." – John 15:11
+    "And we know that in all things God works for the good of those who love him, who have been called according to his purpose." – Romans 8:28
+    "But the fruit of the Spirit is love, joy, peace, forbearance, kindness, goodness, faithfulness, gentleness and self-control." – Galatians 5:22-23
 ];
 
 const backgrounds = [
