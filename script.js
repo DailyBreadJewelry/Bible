@@ -4,31 +4,24 @@ async function getBibleQuotes() {
         const bibleQuotes = await response.json();
         return bibleQuotes;
     } catch (error) {
-        console.error("Error loading Bible quotes:", error);
+        console.error("❌ 加载 Bible quotes 失败:", error);
         return [];
     }
 }
 
 async function getImages() {
     try {
-        const response = await fetch('/pic/');
-        const text = await response.text();
-        const parser = new DOMParser();
-        const htmlDoc = parser.parseFromString(text, "text/html");
-        const imageList = Array.from(htmlDoc.getElementsByTagName("a"))
-            .map(a => a.href)
-            .filter(href => href.match(/\.(jpg|jpeg|png|gif)$/i))
-            .map(href => new URL(href).pathname);
-
-        return imageList;
+        const response = await fetch('images.json');
+        const images = await response.json();
+        return images;
     } catch (error) {
-        console.error("Error loading images:", error);
+        console.error("❌ 加载图片失败:", error);
         return [];
     }
 }
 
 function setDailyContent(bibleQuotes, images) {
-    const today = new Date().toISOString().split('T')[0];
+    const today = new Date().toISOString().split('T')[0]; 
     const storedData = JSON.parse(localStorage.getItem('dailyContent')) || {};
 
     if (storedData.date === today) {
@@ -53,7 +46,7 @@ async function init() {
     if (bibleQuotes.length > 0 && images.length > 0) {
         setDailyContent(bibleQuotes, images);
     } else {
-        console.error("Failed to load quotes or images.");
+        console.error("❌ 读取 quotes 或 images 失败！");
     }
 }
 
