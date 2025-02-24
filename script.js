@@ -1,243 +1,61 @@
-
-const bibleQuotes = [
-    "Do not be wise in your own eyes; fear the Lord and shun evil. This will bring health to your body and nourishment to your bones. – Proverbs 3:7-8",
-    "For I know the plans I have for you,” declares the Lord, “plans to prosper you and not to harm you, plans to give you a hope and a future. – Jeremiah 29:11",
-    "The Lord is my shepherd; I lack nothing. – Psalm 23:1",
-    "I can do all things through Christ who strengthens me. – Philippians 4:13",
-    "The Lord is close to the brokenhearted and saves those who are crushed in spirit. – Psalm 34:18",
-    "In the beginning was the Word, and the Word was with God, and the Word was God. – John 1:1",
-    "And we know that in all things God works for the good of those who love him, who have been called according to his purpose. – Romans 8:28",
-    "For God so loved the world that he gave his one and only Son, that whoever believes in him shall not perish but have eternal life. – John 3:16",
-    "Trust in the Lord with all your heart and lean not on your own understanding; in all your ways submit to him, and he will make your paths straight. – Proverbs 3:5-6",
-    "But the fruit of the Spirit is love, joy, peace, forbearance, kindness, goodness, faithfulness, gentleness and self-control. – Galatians 5:22-23",
-    "I have told you these things, so that in me you may have peace. In this world you will have trouble. But take heart! I have overcome the world. – John 16:33",
-    "Cast all your anxiety on him because he cares for you. – 1 Peter 5:7",
-    "For the Spirit God gave us does not make us timid, but gives us power, love and self-discipline. – 2 Timothy 1:7",
-    "The Lord will fight for you; you need only to be still. – Exodus 14:14",
-    "The Lord is my light and my salvation— whom shall I fear? The Lord is the stronghold of my life— of whom shall I be afraid? – Psalm 27:1",
-    "My grace is sufficient for you, for my power is made perfect in weakness. – 2 Corinthians 12:9",
-    "But the Lord stood by me and gave me strength. – 2 Timothy 4:17",
-    "The name of the Lord is a fortified tower; the righteous run to it and are safe. – Proverbs 18:10",
-    "The Lord is my rock, my fortress and my deliverer; my God is my rock, in whom I take refuge. – 2 Samuel 22:2-3",
-    "The Lord is compassionate and gracious, slow to anger, abounding in love. – Psalm 103:8",
-    "The Lord is near to all who call on him, to all who call on him in truth. – Psalm 145:18",
-    "Fear not, for I have redeemed you; I have called you by name, you are mine. – Isaiah 43:1",
-    "I will instruct you and teach you in the way you should go; I will counsel you with my loving eye on you. – Psalm 32:8",
-    "With God all things are possible. – Matthew 19:26",
-    "The Lord is good to all; he has compassion on all he has made. – Psalm 145:9",
-    "Come to me, all you who are weary and burdened, and I will give you rest. – Matthew 11:28",
-    "The joy of the Lord is your strength. – Nehemiah 8:10",
-    "I have told you this so that my joy may be in you and that your joy may be complete. – John 15:11",
-    "And we know that in all things God works for the good of those who love him, who have been called according to his purpose. – Romans 8:28",
-    "But the fruit of the Spirit is love, joy, peace, forbearance, kindness, goodness, faithfulness, gentleness and self-control. – Galatians 5:22-23",
-    "For God has not given us a spirit of fear, but of power and of love and of a sound mind. – 2 Timothy 1:7",
-    "For the wages of sin is death, but the gift of God is eternal life in Christ Jesus our Lord. – Romans 6:23",
-    "Let all that you do be done in love. – 1 Corinthians 16:14",
-    "A gentle answer turns away wrath, but a harsh word stirs up anger. – Proverbs 15:1",
-    "Love your enemies and pray for those who persecute you. – Matthew 5:44",
-    "Whoever does not love does not know God, because God is love. – 1 John 4:8",
-    "Blessed are the pure in heart, for they will see God. – Matthew 5:8",
-    "Let us not love with words or speech but with actions and in truth. – 1 John 3:18",
-    "Be still, and know that I am God. – Psalm 46:10",
-    "You will keep in perfect peace those whose minds are steadfast, because they trust in you. – Isaiah 26:3",
-    "For I know the plans I have for you, declares the Lord, plans for welfare and not for evil, to give you a future and a hope. – Jeremiah 29:11",
-    "Do not fear, for I am with you; do not be dismayed, for I am your God. – Isaiah 41:10",
-    "For the Lord is righteous, he loves justice; the upright will see his face. – Psalm 11:7",
-    "Fear not, for I have redeemed you; I have called you by name, you are mine. – Isaiah 43:1",
-    "The Lord is good to all, and his mercy is over all that he has made. – Psalm 145:9",
-    "For the Lord is a sun and shield; the Lord bestows favor and honor; no good thing does he withhold from those whose walk is blameless. – Psalm 84:11",
-    "Let everything that has breath praise the Lord. – Psalm 150:6",
-    "And we know that in all things God works for the good of those who love him, who have been called according to his purpose. – Romans 8:28",
-    "I can do all things through Christ who strengthens me. – Philippians 4:13",
-    "The Lord is near to the brokenhearted and saves those who are crushed in spirit. – Psalm 34:18",
-    "Come to me, all you who are weary and burdened, and I will give you rest. – Matthew 11:28",
-    "But the Lord is faithful, and he will strengthen you and protect you from the evil one. – 2 Thessalonians 3:3",
-    "The Lord is my shepherd; I shall not want. – Psalm 23:1",
-    "Whoever believes in me, as Scripture has said, rivers of living water will flow from within them. – John 7:38",
-    "For I am convinced that neither death nor life, neither angels nor demons, neither the present nor the future, nor any powers, neither height nor depth, nor anything else in all creation, will be able to separate us from the love of God that is in Christ Jesus our Lord. – Romans 8:38-39",
-    "But the fruit of the Spirit is love, joy, peace, forbearance, kindness, goodness, faithfulness, gentleness and self-control. – Galatians 5:22-23"
-    "Do not be afraid, for I am with you; do not be dismayed, for I am your God. – Isaiah 41:10",
-    "I will instruct you and teach you in the way you should go; I will counsel you with my loving eye on you. – Psalm 32:8",
-    "The Lord will fight for you; you need only to be still. – Exodus 14:14",
-    "The Lord is my rock, my fortress and my deliverer; my God is my rock, in whom I take refuge. – 2 Samuel 22:2-3",
-    "The name of the Lord is a fortified tower; the righteous run to it and are safe. – Proverbs 18:10",
-    "The Lord is my light and my salvation; whom shall I fear? The Lord is the stronghold of my life; of whom shall I be afraid? – Psalm 27:1",
-    "The Lord is compassionate and gracious, slow to anger, abounding in love. – Psalm 103:8",
-    "I can do all things through Christ who strengthens me. – Philippians 4:13",
-    "With God all things are possible. – Matthew 19:26",
-    "The Lord is good to all, and his mercy is over all that he has made. – Psalm 145:9",
-    "But the fruit of the Spirit is love, joy, peace, forbearance, kindness, goodness, faithfulness, gentleness and self-control. – Galatians 5:22-23",
-    "Let everything that has breath praise the Lord. – Psalm 150:6",
-    "For God gave us a spirit not of fear but of power and love and self-control. – 2 Timothy 1:7",
-    "Come to me, all you who are weary and burdened, and I will give you rest. – Matthew 11:28",
-    "The joy of the Lord is your strength. – Nehemiah 8:10",
-    "For the wages of sin is death, but the gift of God is eternal life in Christ Jesus our Lord. – Romans 6:23",
-    "For I know the plans I have for you, declares the Lord, plans for welfare and not for evil, to give you a future and a hope. – Jeremiah 29:11",
-    "But the Lord is faithful, and he will strengthen you and protect you from the evil one. – 2 Thessalonians 3:3",
-    "The Lord is close to the brokenhearted and saves those who are crushed in spirit. – Psalm 34:18",
-    "Let us not love with words or speech but with actions and in truth. – 1 John 3:18",
-    "The Lord is near to all who call on him, to all who call on him in truth. – Psalm 145:18",
-    "Fear not, for I have redeemed you; I have called you by name, you are mine. – Isaiah 43:1",
-    "I will bless the Lord at all times; his praise shall continually be in my mouth. – Psalm 34:1",
-    "For the Lord is a sun and shield; the Lord bestows favor and honor; no good thing does he withhold from those whose walk is blameless. – Psalm 84:11",
-    "Let us come before him with thanksgiving and extol him with music and song. – Psalm 95:2",
-    "You will keep in perfect peace those whose minds are steadfast, because they trust in you. – Isaiah 26:3",
-    "The Lord is my shepherd; I shall not want. – Psalm 23:1",
-    "He who dwells in the secret place of the Most High will rest in the shadow of the Almighty. – Psalm 91:1",
-    "Blessed are those who mourn, for they will be comforted. – Matthew 5:4",
-    "And now these three remain: faith, hope and love. But the greatest of these is love. – 1 Corinthians 13:13",
-    "The Lord is good to all; he has compassion on all he has made. – Psalm 145:9",
-    "Whoever does not love does not know God, because God is love. – 1 John 4:8",
-    "Let all that you do be done in love. – 1 Corinthians 16:14",
-    "I have told you this so that my joy may be in you and that your joy may be complete. – John 15:11",
-    "But the fruit of the Spirit is love, joy, peace, forbearance, kindness, goodness, faithfulness, gentleness and self-control. – Galatians 5:22-23",
-    "A gentle answer turns away wrath, but a harsh word stirs up anger. – Proverbs 15:1",
-    "But the Lord stood by me and gave me strength. – 2 Timothy 4:17",
-    "For the Lord is righteous, he loves justice; the upright will see his face. – Psalm 11:7",
-    "Fear not, for I have redeemed you; I have called you by name, you are mine. – Isaiah 43:1",
-    "For the Spirit God gave us does not make us timid, but gives us power, love and self-discipline. – 2 Timothy 1:7",
-    "Therefore, if anyone is in Christ, the new creation has come: The old has gone, the new is here! – 2 Corinthians 5:17"
-    "The Lord is my shepherd; I have all that I need. – Psalm 23:1",
-    "The earth is the Lord’s, and everything in it. – Psalm 24:1",
-    "The Lord is my light and my salvation—whom shall I fear? – Psalm 27:1",
-    "I will praise the Lord at all times. I will constantly speak his praises. – Psalm 34:1",
-    "You are the salt of the earth. – Matthew 5:13",
-    "A wise man is strong, and a man of knowledge increases strength. – Proverbs 24:5",
-    "Be still, and know that I am God. – Psalm 46:10",
-    "The Lord is good to everyone. He showers compassion on all his creation. – Psalm 145:9",
-    "The Lord is righteous in everything he does; he is filled with kindness. – Psalm 145:17",
-    "The name of the Lord is a strong fortress; the godly run to him and are safe. – Proverbs 18:10",
-    "We live by believing, not by seeing. – 2 Corinthians 5:7",
-    "Those who fear the Lord are secure; he will be a refuge for their children. – Proverbs 14:26",
-    "Let your good deeds shine out for all to see, so that everyone will praise your heavenly Father. – Matthew 5:16",
-    "I can do everything through Christ, who gives me strength. – Philippians 4:13",
-    "The Lord is my rock, my fortress, and my deliverer. – Psalm 18:2",
-    "The Lord hears his people when they call to him for help. He rescues them from all their troubles. – Psalm 34:17",
-    "The Lord will fight for you; you need only to be still. – Exodus 14:14",
-    "The Lord is my light and my salvation—whom shall I fear? – Psalm 27:1",
-    "The peace of God, which transcends all understanding, will guard your hearts and your minds in Christ Jesus. – Philippians 4:7",
-    "The Lord is good to those who wait for him, to the soul who seeks him. – Lamentations 3:25",
-    "The Lord is my shepherd; I have all that I need. – Psalm 23:1",
-    "And we know that in all things God works for the good of those who love him, who have been called according to his purpose. – Romans 8:28",
-    "Do not let your hearts be troubled. Trust in God; trust also in me. – John 14:1",
-    "The Lord is near to all who call on him, to all who call on him in truth. – Psalm 145:18",
-    "But the Lord stood by me and strengthened me. – 2 Timothy 4:17",
-    "I will bless the Lord at all times; his praise shall continually be in my mouth. – Psalm 34:1",
-    "The Lord is my shepherd; I lack nothing. – Psalm 23:1",
-    "For we live by faith, not by sight. – 2 Corinthians 5:7",
-    "The Lord is righteous in all his ways and faithful in all he does. – Psalm 145:17",
-    "But the fruit of the Spirit is love, joy, peace, forbearance, kindness, goodness, faithfulness, gentleness and self-control. – Galatians 5:22-23",
-    "I can do all this through him who gives me strength. – Philippians 4:13",
-    "The Lord is a refuge for the oppressed, a stronghold in times of trouble. – Psalm 9:9",
-    "The Lord your God is with you, the Mighty Warrior who saves. – Zephaniah 3:17",
-    "In his hand are the depths of the earth, and the mountain peaks belong to him. – Psalm 95:4",
-    "The Lord your God is with you wherever you go. – Joshua 1:9",
-    "For the wages of sin is death, but the gift of God is eternal life in Christ Jesus our Lord. – Romans 6:23",
-    "But the Lord is faithful, and he will strengthen you and protect you from the evil one. – 2 Thessalonians 3:3",
-    "With God all things are possible. – Matthew 19:26",
-    "Fear not, for I am with you; be not dismayed, for I am your God. – Isaiah 41:10",
-    "For nothing will be impossible with God. – Luke 1:37",
-    "The Lord will bless you and keep you. – Numbers 6:24",
-    "I will give you a new heart and put a new spirit in you. – Ezekiel 36:26",
-    "The Lord is my shepherd; I lack nothing. – Psalm 23:1",
-    "For we live by faith, not by sight. – 2 Corinthians 5:7",
-    "The Lord is near to the brokenhearted; he rescues those whose spirits are crushed. – Psalm 34:18",
-    "The Lord will guide you always; he will satisfy your needs in a sun-scorched land and will strengthen your frame. – Isaiah 58:11",
-    "For God is not the author of confusion but of peace. – 1 Corinthians 14:33",
-    "The Lord is my shepherd, I lack nothing. – Psalm 23:1",
-    "He is the Rock, his works are perfect, and all his ways are just. – Deuteronomy 32:4",
-    "Come to me, all you who are weary and burdened, and I will give you rest. – Matthew 11:28",
-    "Fear not, for I am with you. – Isaiah 43:5",
-    "God is our refuge and strength, always ready to help in times of trouble. – Psalm 46:1",
-    "For God is not the author of confusion but of peace. – 1 Corinthians 14:33",
-    "The Lord is my shepherd; I have all that I need. – Psalm 23:1",
-    "And we know that in all things God works for the good of those who love him, who have been called according to his purpose. – Romans 8:28",
-    "The Lord will guide you always; he will satisfy your needs in a sun-scorched land and will strengthen your frame. – Isaiah 58:11",
-    "For I know the plans I have for you, declares the Lord, plans for welfare and not for evil, to give you a future and a hope. – Jeremiah 29:11",
-    "The Lord is good to all; he has compassion on all he has made. – Psalm 145:9",
-    "I can do all things through Christ who strengthens me. – Philippians 4:13",
-    "The Lord is near to the brokenhearted and saves those who are crushed in spirit. – Psalm 34:18",
-    "For I know the plans I have for you, declares the Lord, plans for good and not for disaster, to give you a future and a hope. – Jeremiah 29:11",
-    "For the Lord is righteous, he loves justice; the upright will see his face. – Psalm 11:7",
-    "The Lord is my shepherd, I shall not want. – Psalm 23:1",
-    "God is our refuge and strength, an ever-present help in trouble. – Psalm 46:1",
-    "The Lord will bless you and keep you. – Numbers 6:24",
-    "You are the salt of the earth. – Matthew 5:13",
-    "The joy of the Lord is your strength. – Nehemiah 8:10",
-    "He heals the brokenhearted and binds up their wounds. – Psalm 147:3",
-    "The Lord is my strength and my shield; my heart trusts in him, and he helps me. – Psalm 28:7",
-    "For the Lord is good to all; he has compassion on all he has made. – Psalm 145:9",
-    "Blessed are the poor in spirit, for theirs is the kingdom of heaven. – Matthew 5:3",
-    "Let your light shine before others, that they may see your good deeds and glorify your Father in heaven. – Matthew 5:16",
-    "Blessed are the merciful, for they will be shown mercy. – Matthew 5:7"
-];
-
-
-const backgrounds = [
-    'https://images.unsplash.com/photo-1518495973542-4542c06a5843?q=80&w=2574&auto=format&fit=crop',
-    'https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?q=80&w=2565&auto=format&fit=crop',
-    'https://plus.unsplash.com/premium_photo-1673292293042-cafd9c8a3ab3?q=80&w=2574&auto=format&fit=crop',
-    'https://images.unsplash.com/photo-1435224654926-ecc9f7fa028c?q=80&w=2574&auto=format&fit=crop',
-    'https://plus.unsplash.com/premium_photo-1710849581742-f2151607c745?q=80&w=2630&auto=format&fit=crop',
-    'https://plus.unsplash.com/premium_photo-1673697239936-c2599b0b0498?q=80&w=2671&auto=format&fit=crop',
-    'https://plus.unsplash.com/premium_photo-1675805015392-28fd80c551ec?q=80&w=2664&auto=format&fit=crop',
-    'https://images.unsplash.com/photo-1513836279014-a89f7a76ae86?q=80&w=2576&auto=format&fit=crop',
-    'https://images.unsplash.com/photo-1500375592092-40eb2168fd21?q=80&w=2576&auto=format&fit=crop',
-    'https://plus.unsplash.com/premium_photo-1673002094029-7b23531aa342?q=80&w=2670&auto=format&fit=crop',
-    'https://images.unsplash.com/photo-1668215677573-59cbc8623701?q=80&w=2570&auto=format&fit=crop',
-    'https://images.unsplash.com/photo-1668215455269-e8592b90e9a5?q=80&w=2570&auto=format&fit=crop',
-    'https://images.unsplash.com/photo-1534629938736-b1b076531d3b?q=80&w=2574&auto=format&fit=crop',
-    'https://images.unsplash.com/photo-1581802255112-247d053929c3?q=80&w=2574&auto=format&fit=crop',
-    'https://images.unsplash.com/photo-1682366972379-95471e903f04?q=80&w=2670&auto=format&fit=crop',
-    'https://images.unsplash.com/photo-1577782784416-b43800027065?q=80&w=2671&auto=format&fit=crop'
-];
-
-const defaultBackground = 'https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0';
-
-// 记录上一个背景，防止重复
-let lastBackgroundIndex = -1;
-
-// 预加载背景图
-function preloadImages() {
-    backgrounds.forEach(url => {
-        const img = new Image();
-        img.src = url;
-    });
+async function getBibleQuotes() {
+    try {
+        const response = await fetch('bible_quotes.json');
+        const bibleQuotes = await response.json();
+        return bibleQuotes;
+    } catch (error) {
+        console.error("Error loading Bible quotes:", error);
+        return [];
+    }
 }
 
-// 获取随机金句和背景
-function getRandomQuote() {
-    const randomIndex = Math.floor(Math.random() * bibleQuotes.length);
-    let randomBackground;
+async function getImages() {
+    try {
+        const response = await fetch('/pic/');
+        const text = await response.text();
+        const parser = new DOMParser();
+        const htmlDoc = parser.parseFromString(text, "text/html");
+        const imageList = Array.from(htmlDoc.getElementsByTagName("a"))
+            .map(a => a.href)
+            .filter(href => href.match(/\.(jpg|jpeg|png|gif)$/i))
+            .map(href => new URL(href).pathname);
 
-    // 避免连续相同背景
-    do {
-        randomBackground = Math.floor(Math.random() * backgrounds.length);
-    } while (randomBackground === lastBackgroundIndex);
-
-    lastBackgroundIndex = randomBackground;
-
-    document.getElementById('quote').innerText = bibleQuotes[randomIndex];
-    document.getElementById('date').innerText = new Date().toLocaleDateString();
-
-    // 创建图片对象进行加载
-    const img = new Image();
-    img.src = backgrounds[randomBackground];
-    img.onload = function () {
-        // 淡入背景图
-        document.body.style.transition = 'background-image 1s ease-in-out';
-        document.body.style.backgroundImage = `url(${backgrounds[randomBackground]})`;
-    };
-    img.onerror = function () {
-        // 加载失败时，选择下一个背景
-        const fallbackIndex = (randomBackground + 1) % backgrounds.length;
-        document.body.style.backgroundImage = `url(${backgrounds[fallbackIndex]})`;
-    };
+        return imageList;
+    } catch (error) {
+        console.error("Error loading images:", error);
+        return [];
+    }
 }
 
-// 确保加载时即刻生效
-window.onload = function () {
-    preloadImages();
-    getRandomQuote();
-};
+function setDailyContent(bibleQuotes, images) {
+    const today = new Date().toISOString().split('T')[0];
+    const storedData = JSON.parse(localStorage.getItem('dailyContent')) || {};
+
+    if (storedData.date === today) {
+        document.getElementById('quote').innerText = storedData.quote;
+        document.body.style.backgroundImage = `url(${storedData.image})`;
+        return;
+    }
+
+    const randomQuote = bibleQuotes[Math.floor(Math.random() * bibleQuotes.length)];
+    const randomImage = images[Math.floor(Math.random() * images.length)] || 'pic/default.jpg';
+
+    document.getElementById('quote').innerText = randomQuote;
+    document.body.style.backgroundImage = `url(${randomImage})`;
+
+    localStorage.setItem('dailyContent', JSON.stringify({ date: today, quote: randomQuote, image: randomImage }));
+}
+
+async function init() {
+    const bibleQuotes = await getBibleQuotes();
+    const images = await getImages();
+
+    if (bibleQuotes.length > 0 && images.length > 0) {
+        setDailyContent(bibleQuotes, images);
+    } else {
+        console.error("Failed to load quotes or images.");
+    }
+}
+
+window.onload = init;
 
